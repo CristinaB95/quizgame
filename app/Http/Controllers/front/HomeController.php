@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Category;
 use App\Question;
+use Auth;
 class HomeController extends Controller
 {
     public function index(){
@@ -20,13 +21,23 @@ class HomeController extends Controller
         // dd($categories);
         return view('public.categories' , ['categories'=>$categories]);
     }
+    public function contactPage(){
+        return view('public.contact');
+    }
     public function categoriesPaginate(){
         $categories = Category::where('status', '=' , '1')->paginate(3);
         return $categories;
     }
     public function categoryQuiz($id){
+        if(Auth::check() != true){
+            return redirect('/login');
+        }
         $category = Category::find($id);
-        return view('public.quiz', ['category'=>$category]);
+        $questions = Question::where('category_id' , '=' , $id)->where('status' , '=' , '1')->inRandomOrder()->limit(5)->get();
+        if(!count($questions)){
+            return redirect('/categories');
+        }
+        return view('public.quiz', ['category'=>$category , 'questions'=>$questions]);
     }
     public function categoryQuizSubmit(Request $request, Category $category){
         // dd($request->all());
@@ -42,12 +53,29 @@ class HomeController extends Controller
                 }
             }
         }
-        echo $number_correct_answers;
+        $score = $number_correct_answers * 10;
         session(['number_of_correct_answers'=>$number_correct_answers , 
-                'number_of_questions'=>count($questions_re)]);
+                'number_of_questions'=>count($questions_re),
+                'score_quiz'=>$score]);
         // dd($request->session()->all());
         // $value = session('key');
+        $user = Auth::user();
+        $user->score = $user->score + $score;
+        $user->save();
         return redirect('categories/'.$category->id.'/score');
-
+    }
+    public function categoryQuizScore(Category $category){
+        $number_of_correct_answers = session('number_of_correct_answers');
+        $number_of_questions = session('number_of_questions');
+        return view('public.score' , ['number_of_questions'=>$number_of_questions , 
+                                    'number_of_correct_answers'=>$number_of_correct_answers ,
+                                    'title_good_score'=>"Congratulations",
+                                    'description_good_score'=>"You did an amazing job",
+                                    'title_bad_score'=>"Good effort!",
+                                    'description_bad_score'=>"Try again for better results"]);
+    }
+    public function usersRoles(){
+        $user = Auth::user();
+        dd($user->authorizeRoles(['admin']));
     }
 }

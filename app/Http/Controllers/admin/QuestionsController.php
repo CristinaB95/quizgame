@@ -10,6 +10,10 @@ use App\Answer;
 use App\User;
 class QuestionsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('isAdmin');
+        
+    }
     /**
      * Display a listing of the resource.
      *
@@ -42,7 +46,7 @@ class QuestionsController extends Controller
         $question->content =request("content");
         $question->status = request('status');
         $question->category_id = $category->id;
-        $question->user_id= 1;
+        $question->user_id= auth()->id();
         $question->save();
         return redirect('admin/categories/'.$category->id);
 

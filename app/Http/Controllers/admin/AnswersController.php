@@ -1,16 +1,19 @@
 <?php
 
 namespace App\Http\Controllers\admin;
-
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Question;
 use App\Answer;
 use App\Category;
 use Illuminate\Support\Facades\Db;
-
+use Auth;
 class AnswersController extends Controller
 {
+    public function __construct(){
+        $this->middleware('isAdmin');
+        
+    }
     public function create(Category $category, Question $question){
         return view('admin/answers/create', ['category'=> $category , 'question'=>$question]);
     }
@@ -29,6 +32,8 @@ class AnswersController extends Controller
 
     }
     public function edit($id, Category $category){
+        // $user = Auth::user()->authorizeRoles(['admin']);
+        // dd($user);
         $answer = Answer::find($id);
         return view('admin/answers/edit', ['answer'=>$answer , 'category'=>$category]);
     }

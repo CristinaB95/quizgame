@@ -12,13 +12,15 @@
 */
 // Routes for homepage 
 Route::get('/', 'front\HomeController@index');
-Route::get('/categories' , 'front\HomeController@categories');
+Route::get('/categories' , 'front\HomeController@categories')->name('categories');
+Route::get('/contact-page' , 'front\HomeController@contactPage');
 Route::get('/categories/paginate', 'front\HomeController@categoriesPaginate');
 Route::get('/categories/{category}/quiz', 'front\HomeController@categoryQuiz');
 Route::post('/categories/{category}/quiz-submit', 'front\HomeController@categoryQuizSubmit');
+Route::get('/categories/{category}/score', 'front\HomeController@categoryQuizScore');
+Route::get('/users/roles', 'front\HomeController@usersRoles');
 
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
 
 // Routes for categories
 Route::get('/admin/categories', 'admin\CategoriesController@index');

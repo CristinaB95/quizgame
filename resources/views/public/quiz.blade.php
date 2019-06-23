@@ -1,32 +1,36 @@
 @extends('layouts.homepage')
 @section('content')
-<div class="container pb-5">
-    <form method="post" action="/categories/{{$category->id}}/quiz-submit">
-    @csrf
-        @foreach($category->questions as $key=>$question)
-        <div class="card d-none" id="q-{{$key}}">
-            <div class="card-header">
-                {{$question->content}}
+<section class="pages-front-height d-flex align-items-center">
+    <div class="container pb-5">
+        <form method="post" action="/categories/{{$category->id}}/quiz-submit">
+        @csrf
+            @foreach($questions as $key=>$question)
+            <div class="card d-none" id="q-{{$key}}">
+                <div class="card-header">
+                    {{$question->content}}
+                </div>
+                <div class="card-body">
+                    @foreach($question->answers as $answer)
+                        @if($answer->status == 1)
+                            <div class="form-check">
+                                <input class="form-check-input d-none " type="radio" name="questions[{{$question->id}}]" id="answer-{{$answer->id}}" value="{{$answer->id}}">
+                                <label class="form-check-label" for="answer-{{$answer->id}}">
+                                    {{$answer->content}}
+                                </label>
+                            </div>  
+                        @endif
+                    @endforeach
+                </div>
             </div>
-            <div class="card-body">
-                @foreach($question->answers as $answer)
-                    <div class="form-check">
-                        <input class="form-check-input " type="radio" name="questions[{{$question->id}}]" id="exampleRadios1" value="{{$answer->id}}">
-                        <label class="form-check-label" for="exampleRadios1">
-                            {{$answer->content}}
-                        </label>
-                    </div>  
-                @endforeach
+        @endforeach
+            <div class="buttons-quiz d-flex justify-content-between">
+                <a href="" id="prev"> <i class="fas fa-chevron-left"></i> </a>
+                <a href="" id="next"> <i class="fas fa-chevron-right"></i> </a>
+                <button class="d-none btn btn-start" id="finish-quiz-button" type="submit">Finish</button>
             </div>
-        </div>
-    @endforeach
-        <div class="buttons-quiz d-flex justify-content-between">
-            <a href="" id="prev"> <i class="fas fa-chevron-left"></i> </a>
-            <a href="" id="next"> <i class="fas fa-chevron-right"></i> </a>
-            <button class="d-none btn btn-start" id="finish-quiz-button" type="submit">Finish</button>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
+</section>
 @endsection
 @section('bottomscripts')
 <script>
