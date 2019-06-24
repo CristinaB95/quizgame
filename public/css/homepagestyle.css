@@ -160,7 +160,13 @@ body{
     max-width: 700px;
 }
 /* quiz style */
-
+.btn-quiz{
+    width: 5%;
+}
+.radio-toolbar input[type="radio"]:checked+label {
+    font-weight: bold;
+    color:#182c61;
+}
 /* score page style */
 .score-page{
     background-image: url('/images/front/score-page.png');
@@ -178,6 +184,13 @@ body{
 .corect-answers{
     font-size: 25px;
     padding-left: 3px;
+}
+/* register page */
+.image-register, .image-login{
+    width: 100%;
+}
+.image-register>img , .image-login>img{
+    width: 100%;
 }
 
 /* footer section style */

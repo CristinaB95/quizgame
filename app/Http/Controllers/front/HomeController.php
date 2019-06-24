@@ -67,12 +67,14 @@ class HomeController extends Controller
     public function categoryQuizScore(Category $category){
         $number_of_correct_answers = session('number_of_correct_answers');
         $number_of_questions = session('number_of_questions');
+        $score_quiz = session('score_quiz');
         return view('public.score' , ['number_of_questions'=>$number_of_questions , 
                                     'number_of_correct_answers'=>$number_of_correct_answers ,
                                     'title_good_score'=>"Congratulations",
                                     'description_good_score'=>"You did an amazing job",
                                     'title_bad_score'=>"Good effort!",
-                                    'description_bad_score'=>"Try again for better results"]);
+                                    'description_bad_score'=>"Try again for better results",
+                                    'score_quiz'=> $score_quiz]);
     }
     public function usersRoles(){
         $user = Auth::user();

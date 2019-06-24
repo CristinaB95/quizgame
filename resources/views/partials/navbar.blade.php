@@ -19,12 +19,15 @@
                     <a class="nav-link text-navi-blue" href="{{ route('login') }}">Login</a>
                 </li>
             @else
-                <li class="nav-item">
-                    <a class="nav-link text-navi-blue" href="{{ route('logout') }}"
-                        onclick="event.preventDefault();
-                                        document.getElementById('logout-form').submit();">
-                        {{ __('Logout') }}
-                    </a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">User</a>
+                    <div class="dropdown-menu">
+                        <a class="nav-link text-navi-blue dropdown-item" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+                        <a class="dropdown-item nav-link text-navi-blue" href="/profile">View Profile</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                         @csrf
                     </form>

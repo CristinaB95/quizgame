@@ -19,6 +19,8 @@ Route::get('/categories/{category}/quiz', 'front\HomeController@categoryQuiz');
 Route::post('/categories/{category}/quiz-submit', 'front\HomeController@categoryQuizSubmit');
 Route::get('/categories/{category}/score', 'front\HomeController@categoryQuizScore');
 Route::get('/users/roles', 'front\HomeController@usersRoles');
+Route::get('/profile', 'front\UsersController@show');
+Route::put('/profile/{id}' , 'front\UsersController@updateInfo');
 
 Auth::routes();
 
