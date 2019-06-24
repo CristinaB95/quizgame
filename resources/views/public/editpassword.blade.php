@@ -1,6 +1,6 @@
 @extends('layouts.homepage')
 @section('content')
-<section class="profile-page pages-front-height d-flex align-items-center border rounded">
+<section class="profile-page pages-front-height d-flex align-items-center">
     <div class="container">
         <h1 class="text-center pb-4 text-navi-blue font-lobster"> Welcome {{$user->username}} !</h1>
         <div class="profile-page-items mx-auto d-flex justify-content-center">
@@ -17,34 +17,25 @@
                                 </ul>
                             </div>
                         @endif
-                        @if(session()->has('message'))
-                            <div class="alert alert-success">
-                                 {{ session()->get('message') }}
-                            </div>
-                        @endif
-                        <form action="/profile" method="POST" class="profile-page-form">
+                        <form action="/editpassword" method="POST">
                             {{csrf_field()}}
                             {{method_field('PUT')}}
                             <div class="row">
                                 <div class="form-group col-6">
-                                    <label for="first_name" class="font-lobster text-navi-blue">First Name</label>
-                                    <input type="text" class="form-control" id="first_name" name="first_name" value="{{$user->first_name}}" placeholder="First name">
-                                </div>
-                                <div class="form-group col-6">
-                                    <label for="last_name" class="font-lobster text-navi-blue">Last Name</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" value="{{$user->last_name}}" placeholder="First name">
+                                    <label for="new_password" class="font-lobster text-navi-blue">New Password</label>
+                                    <input type="password" class="form-control" id="new_password" name="new_password" placeholder="New password">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-6">
-                                    <label for="username" class="font-lobster text-navi-blue">Username</label>
-                                    <input type="text" class="form-control" id="username" name="username" value="{{$user->username}}">
+                                    <label for="re_new_password" class="font-lobster text-navi-blue">Confirm new password</label>
+                                    <input type="password" class="form-control" id="re_new_password" name="re_new_password" placeholder="Confirm new password">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-6">
-                                    <label for="email" class="font-lobster text-navi-blue">Email</label>
-                                    <input type="email" class="form-control" id="email" name="email" value="{{$user->email}}">
+                                    <label for="old_password" class="font-lobster text-navi-blue">Old password</label>
+                                    <input type="password" class="form-control" id="old_password" name="old_password" placeholder="Old password">
                                 </div>
                             </div>
                             <div clas="row">
@@ -59,5 +50,4 @@
         </div>
     </div>
 </section>
-
 @endsection

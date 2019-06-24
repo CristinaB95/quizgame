@@ -66,7 +66,7 @@
                                 </div>
                             </div>
                             <div class="text-center pt-3">
-                                <a href="{{route('register')}}">  {{ __("Don't Have an Account?") }} </a>
+                                <a class="text-navi-blue register-link" href="{{route('register')}}">  {{ __("Don't Have an Account?") }} </a>
                             </div>
                             </form>
                     </div>

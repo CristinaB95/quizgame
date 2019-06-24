@@ -19,8 +19,8 @@
                     <a class="nav-link text-navi-blue" href="{{ route('login') }}">Login</a>
                 </li>
             @else
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">User</a>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle text-navi-blue" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">User</a>
                     <div class="dropdown-menu">
                         <a class="nav-link text-navi-blue dropdown-item" href="{{ route('logout') }}"
                             onclick="event.preventDefault();

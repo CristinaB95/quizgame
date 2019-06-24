@@ -34,7 +34,7 @@
             success: function(response){
                 for(var i = 0; i<response.data.length; i++){
                     $('#row').append
-                    ('  <a href="/categories/'+response.data[i].id+'" class="col-md-4 col-12 text-navi-blue pb-5">'+
+                    ('  <a href="/categories/'+response.data[i].id+'/quiz" class="category-view col-md-4 col-12 text-navi-blue pb-5">'+
                         '<div>'+
                         '<div class="categories-image-circle1 mx-auto">'+
                             '<img src="/images/categories/'+response.data[i].image+'">'+

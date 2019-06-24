@@ -32,7 +32,7 @@ class UsersController extends Controller{
         $user = User::find($id);
         return view('admin.users.edit', ['user'=>$user]);
     }
-    public function update(Request $request, $id){
+public function update(Request $request, $id){
         $user = User::find($id);
         $user->username = request('username');
         $user->first_name = request('first_name');

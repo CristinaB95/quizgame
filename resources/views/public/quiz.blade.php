@@ -5,16 +5,17 @@
         <form method="post" action="/categories/{{$category->id}}/quiz-submit">
         @csrf
             @foreach($questions as $key=>$question)
+            <input type="hidden" name="questions_show[{{$question->id}}]">
             <div class="card d-none" id="q-{{$key}}">
-                <div class="card-header">
-                    {{$question->content}}
+                <div class="pt-3 px-3 text-navi-blue">
+                    <h4 class="font-lobster">{{$question->content}}</h4>
                 </div>
-                <div class="card-body">
+                <div class="card-body font-josefin">
                     @foreach($question->answers as $answer)
                         @if($answer->status == 1)
                             <div class="form-check radio-toolbar">
                                 <input class="form-check-input d-none " type="radio" name="questions[{{$question->id}}]" id="answer-{{$answer->id}}" value="{{$answer->id}}">
-                                <label class="form-check-label" for="answer-{{$answer->id}}">
+                                <label class="form-check-label pb-2" for="answer-{{$answer->id}}">
                                     {{$answer->content}}
                                 </label>
                             </div>  
@@ -23,16 +24,16 @@
                 </div>
             </div>
         @endforeach
-            <div class="buttons-quiz d-flex justify-content-between font-lobster">
-                <a href="" id="prev" class="btn-start btn-quiz text-center rounded mt-3"> 
+            <div class="buttons-quiz d-flex justify-content-between font-lobster ">
+                <a href="" id="prev" class="btn-start btn-quiz text-center rounded text-navi-bluept-1 mt-3"> 
                     <!-- <i class="fas fa-chevron-left"></i> -->
                     Prev
                  </a>
-                <a href="" id="next" class="btn-start btn-quiz text-center rounded mt-3">
+                <a href="" id="next" class="btn-start btn-quiz text-center text-navi-blue rounded pt-1 mt-3">
                      <!-- <i class="fas fa-chevron-right"></i> -->
                     Next
                 </a>
-                <button class="d-none btn btn-start" id="finish-quiz-button" type="submit">Finish</button>
+                <button class="d-none btn btn-start mt-3" id="finish-quiz-button" type="submit">Finish</button>
             </div>
         </form>
     </div>
@@ -41,7 +42,7 @@
 @section('bottomscripts')
 <script>
     var contor = 0;
-    var number_questions = {{count($category->questions)}};
+    var number_questions = {{count($questions)}};
     // afisam prima intrebare 
     $('#q-'+contor).removeClass('d-none');
 

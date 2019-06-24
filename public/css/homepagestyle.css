@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:400,600&display=swap');
 a, a:hover{
     text-decoration: none;
     color: #222;
@@ -17,6 +18,9 @@ body{
 }
 .font-lobster{
     font-family: 'Lobster', cursive;
+}
+.font-josefin{
+    font-family: 'Josefin Sans', sans-serif;
 }
 .pages-front-height{
     min-height: calc(100vh - 100px);
@@ -162,11 +166,14 @@ body{
 /* quiz style */
 .btn-quiz{
     width: 5%;
+    height: 38px;
 }
 .radio-toolbar input[type="radio"]:checked+label {
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 22px;
     color:#182c61;
 }
+
 /* score page style */
 .score-page{
     background-image: url('/images/front/score-page.png');
@@ -185,12 +192,33 @@ body{
     font-size: 25px;
     padding-left: 3px;
 }
+#score-quiz{
+    color: #F4976C;
+}
+#score-quiz-bad{
+    color: red;
+}
+/* user nav style */
+.profile-page-items{
+    border: 1px solid #575a89;
+    border-radius: 25px;
+    width: 70%;
+}
+.nav-user>ul>li>a:hover{
+    color:#778beb;
+}
 /* register page */
 .image-register, .image-login{
     width: 100%;
 }
 .image-register>img , .image-login>img{
     width: 100%;
+}
+.btn-link{
+    color: #778beb;
+}
+.register-link:hover{
+    color: #778beb;
 }
 
 /* footer section style */

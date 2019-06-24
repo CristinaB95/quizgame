@@ -13,14 +13,22 @@
 // Routes for homepage 
 Route::get('/', 'front\HomeController@index');
 Route::get('/categories' , 'front\HomeController@categories')->name('categories');
-Route::get('/contact-page' , 'front\HomeController@contactPage');
 Route::get('/categories/paginate', 'front\HomeController@categoriesPaginate');
 Route::get('/categories/{category}/quiz', 'front\HomeController@categoryQuiz');
 Route::post('/categories/{category}/quiz-submit', 'front\HomeController@categoryQuizSubmit');
 Route::get('/categories/{category}/score', 'front\HomeController@categoryQuizScore');
 Route::get('/users/roles', 'front\HomeController@usersRoles');
-Route::get('/profile', 'front\UsersController@show');
-Route::put('/profile/{id}' , 'front\UsersController@updateInfo');
+// Routes for user-info
+Route::get('/profile', 'front\UsersController@editInfo');
+Route::put('/profile' , 'front\UsersController@updateInfo');
+Route::get('/editpassword' , 'front\UsersController@editPassword');
+Route::put('/editpassword' , 'front\UsersController@updatePassword');
+Route::get('/deleteaccount' , 'front\UsersController@deleteAccount');
+Route::delete('/deleteaccount' , 'front\UsersController@destroy');
+
+// Routes for contact page
+Route::get('/contact-page' , 'front\HomeController@contactPage');
+Route::post('/contact-page' , 'front\HomeController@contactPageSend');
 
 Auth::routes();
 

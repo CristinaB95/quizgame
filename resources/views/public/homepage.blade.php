@@ -9,7 +9,7 @@
         </div>
         <div class="text-section-1 align-self-center">
             <h1 class="font-lobster">Best quiz ever</h1>
-            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit nisl quis justo sagittis malesuada. Ut et dui ac est feugiat sodales et id nisi. In viverra in purus et viverra. </p>
+            <p class="font-josefin"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit nisl quis justo sagittis malesuada. Ut et dui ac est feugiat sodales et id nisi. In viverra in purus et viverra. </p>
             @guest
                 <a class="btn btn-start font-lobster px-4" href="{{ route('login') }}"> Start </a>
             @else
