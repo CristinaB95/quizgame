@@ -14,8 +14,7 @@
 <!-- DataTables Example -->
 <div class="card mb-3">
   <div class="card-header d-flex">
-    <i class="fas fa-table"></i>
-    Data Table Example <a href="/admin/questions/{{$question->id}}/answers/create" class="ml-auto"><i class="fa fa-plus"></i></a></div>
+    Answers <a href="/admin/questions/{{$question->id}}/answers/create" class="ml-auto"><i class="fa fa-plus"></i></a></div>
   <div class="card-body">
   @if($question->answers->count())
     <div class="table-responsive">
@@ -24,7 +23,7 @@
           <tr>
             <th>Id</th>
             <th>Content</th>
-            <th>Date added</th>
+            <th>Is correct?</th>
             <th>Status</th>
             <th></th>
           </tr>
@@ -38,7 +37,7 @@
         <tr>
             <td> {{$answer->id}}</td>
             <td>{{$answer->content}}</td>
-            <td>{{$answer->valid}}</td>
+            <td>{{$answer->valid == 0 ? "No" : "Yes" }}</td>
             <td>{{$answer->status == 0 ? "Inactive" : "Active"}}</td>
             <td>
               <a href="/admin/answers/{{$answer->id}}/edit"><i class="far fa-edit"></i></a>
@@ -52,7 +51,6 @@
     </div>
     @endif
   </div>
-  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
 
 </div>

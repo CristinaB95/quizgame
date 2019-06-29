@@ -2,7 +2,8 @@
 @section('content')
 <section class="profile-page pages-front-height d-flex align-items-center border rounded">
     <div class="container">
-        <h1 class="text-center pb-4 text-navi-blue font-lobster"> Welcome {{$user->username}} !</h1>
+        <h1 class="text-center pb-2 pt-4 text-navi-blue font-lobster"> Welcome {{$user->username}} !</h1>
+        <h4 class="text-center pb-4 text-navi-blue font-lobster"> You have points {{$user->score}} </h4>
         <div class="profile-page-items mx-auto d-flex justify-content-center">
             @include('partials/navbar_user')
             <div class="col-md-8">
@@ -32,7 +33,7 @@
                                 </div>
                                 <div class="form-group col-6">
                                     <label for="last_name" class="font-lobster text-navi-blue">Last Name</label>
-                                    <input type="text" class="form-control" id="last_name" name="last_name" value="{{$user->last_name}}" placeholder="First name">
+                                    <input type="text" class="form-control" id="last_name" name="last_name" value="{{$user->last_name}}" placeholder="Last name">
                                 </div>
                             </div>
                             <div class="row">

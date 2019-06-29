@@ -60,6 +60,7 @@ class UsersController extends Controller
         // dd($user);
         $db_password = Auth::User()->password; 
         if(Hash::check($request['password'], $db_password)){
+            $user->roles()->detach();
             $user->delete();
             return redirect('/');
         }

@@ -14,8 +14,8 @@
 <!-- DataTables Example -->
 <div class="card mb-3">
   <div class="card-header d-flex">
-    <i class="fas fa-table"></i>
-    Data Table Example <a href="/admin/categories/{{$category->id}}/questions/create" class="ml-auto"><i class="fa fa-plus"></i></a></div>
+    Questions 
+    <a href="/admin/categories/{{$category->id}}/questions/create" class="ml-auto"><i class="fa fa-plus"></i></a></div>
   <div class="card-body">
   @if($category->questions->count())
     <div class="table-responsive">
@@ -47,7 +47,7 @@
                 <a href="/admin/questions/{{$question->id}}" class="delete" data-id="{{$question->id}}"><i class="far fa-trash-alt"></i></a>
             </td>
             <td>
-                <a href="/admin/categories/{{$category->id}}/questions/{{$question->id}}"><i class="fas fa-angle-right"></i></a>
+                <a href="/admin/questions/{{$question->id}}"><i class="fas fa-angle-right"></i></a>
             </td>
         </tr>
        @endforeach
@@ -56,7 +56,6 @@
     </div>
     @endif
   </div>
-  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
 
 </div>

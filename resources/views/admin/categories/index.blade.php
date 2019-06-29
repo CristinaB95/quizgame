@@ -7,15 +7,14 @@
   <li class="breadcrumb-item">
     <a href="#">Dashboard</a>
   </li>
-  <li class="breadcrumb-item active">Overview</li>
+  <li class="breadcrumb-item active">Categories</li>
 </ol>
 
 
 <!-- DataTables Example -->
 <div class="card mb-3">
   <div class="card-header d-flex">
-    <i class="fas fa-table"></i>
-    Data Table Example
+    Categories
     <a href="/admin/categories/create"  class="ml-auto"> <i class="fa fa-plus"></i></a>
     </div>
   <div class="card-body">
@@ -54,7 +53,6 @@
       </table>
     </div>
   </div>
-  <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
 </div>
 
 </div>

@@ -32,6 +32,11 @@ Route::post('/contact-page' , 'front\HomeController@contactPageSend');
 
 Auth::routes();
 
+//Route for admin dashboard
+Route::get('/admin' , 'admin\HomePageController@index');
+Route::get('/admin/contact' , 'admin\ContactController@index');
+Route::get('/admin/contact/{contact}' , 'admin\ContactController@show');
+
 // Routes for categories
 Route::get('/admin/categories', 'admin\CategoriesController@index');
 Route::get('/admin/categories/create', 'admin\CategoriesController@create');
