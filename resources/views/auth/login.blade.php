@@ -1,7 +1,7 @@
 @extends('layouts.homepage')
 
 @section('content')
-<section class="login-page d-flex align-items-center pages-front-height font-lobster text-navi-blue">
+<section class="login-page custom-padding pb-md-0 d-flex align-items-center pages-front-height font-lobster text-navi-blue">
     <div class="container">
         <div class="row ">
             <div class="col-lg-6 col-12 my-auto pt-5 pt-lg-0">

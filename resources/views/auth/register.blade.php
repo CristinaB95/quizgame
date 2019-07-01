@@ -1,7 +1,7 @@
 @extends('layouts.homepage')
 
 @section('content')
-<section class="register-page d-flex align-items-center pages-front-height font-lobster text-navi-blue">
+<section class="register-page custom-padding d-flex align-items-center pages-front-height font-lobster text-navi-blue">
     <div class="container">
         <div class="row">
             <div class="form-register col-md-6 my-auto">
