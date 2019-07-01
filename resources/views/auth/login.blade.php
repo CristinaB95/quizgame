@@ -4,8 +4,8 @@
 <section class="login-page d-flex align-items-center pages-front-height font-lobster text-navi-blue">
     <div class="container">
         <div class="row ">
-            <div class="col-md-6 my-auto">
-                <div class="border-right">
+            <div class="col-lg-6 col-12 my-auto pt-5 pt-lg-0">
+                <div class="border-login">
                     <div class="text-center"> <h1>{{ __('Login') }} </h1> </div>
 
                     <div class="card-body">
@@ -72,7 +72,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 image-login">
+            <div class="col-lg-6 col-12 image-login">
                 <img src="/images/front/login-page.png">
             </div>
         </div>

@@ -18,7 +18,7 @@ class HomeController extends Controller
         return view('public.homepage' , ['users'=>$users , 'categories'=>$categories , 'questions'=>$questions]);
     }
     public function categories(){
-        $categories = Category::where('status', '=' , '1')->paginate(3);
+        $categories = Category::where('status', '=' , '1')->paginate(6);
         // dd($categories);
         return view('public.categories' , ['categories'=>$categories]);
     }

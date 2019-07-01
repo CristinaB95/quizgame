@@ -163,11 +163,7 @@ body{
 .contact-page-form{
     max-width: 700px;
 }
-/* quiz style */
-.btn-quiz{
-    width: 5%;
-    height: 38px;
-}
+
 .radio-toolbar input[type="radio"]:checked+label {
     font-weight: 600;
     font-size: 22px;
@@ -207,7 +203,13 @@ body{
 .nav-user>ul>li>a:hover{
     color:#778beb;
 }
+.border-bottom-user{
+    border-bottom: 1px solid #dfe4ea;
+}
 /* register page */
+.border-login{
+    border-right: 1px solid #dfe4ea;
+}
 .image-register, .image-login{
     width: 100%;
 }
@@ -229,4 +231,86 @@ body{
     color: #dfe4ea;
     position: absolute;
     bottom: 0;
+}
+.pb-100{
+    padding-bottom: 100px;
+}
+/* responsive */
+@media screen and (min-width: 320px) and (max-width: 500px){
+    .score-page{
+    background-position: 65% 65%;}
+}
+@media screen and (max-width: 765px){
+    .contact-page-items {
+        width: 100%;
+    }
+    .section-3-items>h2 {
+        font-size: 25px;
+    }
+    .nav-user>ul>li{
+        display: inline-block;
+    }
+    .profile-page h1{
+        font-size: 30px;
+    }
+    .score-page{
+        background-position: 65% 65%;
+        background-size: 90%;
+    }
+    .score-page-container{
+        width: 100%;
+    }
+
+}
+@media screen and (min-width: 766px){
+    .nav-user{
+        border-right: 1px solid #dfe4ea;
+    }
+}
+@media screen and (min-width: 766px) and (max-width: 1000px){
+    .score-page{
+    background-position: 65% 60%;
+    background-size: 70%;
+    }
+}
+@media screen and (max-width: 930px){
+    .image-jumbotron {
+        display:none;
+    }
+    .clip-art{
+        clip-path: polygon(50% 0%, 100% 0, 100% 60%, 59% 100%, 0 100%, 0 0);
+    }
+    .section-3-container{
+        width: 100%;
+        padding: 0;
+    }
+    .section-3{
+        height: 300px;
+        background-image: none;
+    }
+    /* .score-page{
+        background-position: 65% 85%;
+        background-size: 90%;
+    } */
+   
+}
+@media screen and (max-width: 990px){
+    .border-login{
+        border-right: 0;
+    }
+    .profile-page-items{
+        width: 100%;
+    }
+}
+@media screen and (min-width: 931px) and (max-width: 1200px){
+    .image-jumbotron{
+        width: 30%;
+    }
+    .section-3{
+        background-position: 120% 90%;
+        background-size: 70%;
+    }
+    .section-3-container {
+        width: 80%;
+    }
 }

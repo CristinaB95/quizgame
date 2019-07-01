@@ -21,13 +21,13 @@
 <section class="section-2 font-lobster text-navi-blue" id="overview">
     <div class="container">
         <div class="row d-flex">
-            <div class="col-md-4 col-12 text-center">
+            <div class="col-md-4 col-12 text-center pb-5 pb-md-0">
                 <div class="section-2-circle mx-auto d-flex align-items-center" id="categories-circle">
                     <div class="font-size-bigger mx-auto ">{{count($categories)}}</div>
                 </div>
                 <h2>Categories</h2>
             </div>
-            <div class="col-md-4 col-12 text-center">
+            <div class="col-md-4 col-12 text-center pb-5 pb-md-0">
                 <div class="section-2-circle mx-auto d-flex align-items-center" id="questions-circle">
                     <div class="font-size-bigger mx-auto ">{{count($questions)}}</div>
                 </div>

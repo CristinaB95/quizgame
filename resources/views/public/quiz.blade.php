@@ -1,6 +1,6 @@
 @extends('layouts.homepage')
 @section('content')
-<section class="pages-front-height d-flex align-items-center">
+<section class="pages-front-height pb-100 d-flex align-items-center">
     <div class="container pb-5">
         <form method="post" action="/categories/{{$category->id}}/quiz-submit">
         @csrf
@@ -25,11 +25,11 @@
             </div>
         @endforeach
             <div class="buttons-quiz d-flex justify-content-between font-lobster ">
-                <a href="" id="prev" class="btn-start btn-quiz text-center rounded text-navi-bluept-1 mt-3"> 
+                <a href="" id="prev" class="btn btn-start btn-quiz text-center rounded text-navi-blue mt-3"> 
                     <!-- <i class="fas fa-chevron-left"></i> -->
                     Prev
                  </a>
-                <a href="" id="next" class="btn-start btn-quiz text-center text-navi-blue rounded pt-1 mt-3">
+                <a href="" id="next" class="btn btn-start btn-quiz text-center text-navi-blue rounded mt-3">
                      <!-- <i class="fas fa-chevron-right"></i> -->
                     Next
                 </a>

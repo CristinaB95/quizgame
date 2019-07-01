@@ -1,6 +1,6 @@
 @extends('layouts.homepage')
 @section('content')
-<section class="score-page pages-front-height align-items-center">
+<section class="score-page pb-100 pages-front-height align-items-center">
     <div class="container ">
         <div class="score-page-container mx-auto text-center">
             <div class="score-page-items text-navi-blue">

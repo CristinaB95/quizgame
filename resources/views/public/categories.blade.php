@@ -1,11 +1,11 @@
 @extends('layouts.homepage')
 @section('content')
-<section class="section-categories pages-front-height d-flex align-items-center">
+<section class="section-categories pb-100 pages-front-height d-flex align-items-center">
  <div class="container text-center font-lobster text-navi-blue">
-     <h1 class="pb-5"> Select category </h1>
+     <h1 class="pb-5"> Select a category </h1>
     <div class="row" id="row">
         @foreach($categories as $category)
-        <a href="/categories/{{$category->id}}/quiz" class="category-view col-md-4 col-12 pb-5 text-navi-blue">
+        <a href="/categories/{{$category->id}}/quiz" class="category-view col-md-4  col-sm-6 col-12 pb-5 text-navi-blue">
             <div>
                 <div class="categories-image-circle1 mx-auto">
                     <img src="/images/categories/{{$category->image}}">

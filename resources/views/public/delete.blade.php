@@ -1,9 +1,9 @@
 @extends('layouts.homepage')
 @section('content')
-<section class="profile-page pages-front-height d-flex align-items-center">
+<section class="profile-page pb-100 pages-front-height d-flex align-items-center">
     <div class="container">
-        <h1 class="text-center pb-4 text-navi-blue font-lobster"> Welcome {{$user->username}} !</h1>
-        <div class="profile-page-items mx-auto d-flex justify-content-center">
+        <h1 class="text-center py-4 text-navi-blue font-lobster"> Welcome {{$user->username}} !</h1>
+        <div class="profile-page-items mx-auto d-flex flex-column flex-md-row justify-content-center">
             @include('partials/navbar_user')
             <div class="col-md-8">
                 <div class="mb-3">

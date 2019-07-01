@@ -1,10 +1,10 @@
 @extends('layouts.homepage')
 @section('content')
-<section class="profile-page pages-front-height d-flex align-items-center border rounded">
+<section class="profile-page pb-100 pages-front-height d-flex align-items-center">
     <div class="container">
         <h1 class="text-center pb-2 pt-4 text-navi-blue font-lobster"> Welcome {{$user->username}} !</h1>
-        <h4 class="text-center pb-4 text-navi-blue font-lobster"> You have points {{$user->score}} </h4>
-        <div class="profile-page-items mx-auto d-flex justify-content-center">
+        <h4 class="text-center pb-4 text-navi-blue font-lobster"> You have {{$user->score}} points  </h4>
+        <div class="profile-page-items mx-auto d-flex flex-column flex-md-row  justify-content-center">
             @include('partials/navbar_user')
             <div class="col-md-8">
                 <div class="mb-3">
@@ -37,13 +37,13 @@
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="form-group col-6">
+                                <div class="form-group col-8 col-md-6">
                                     <label for="username" class="font-lobster text-navi-blue">Username</label>
                                     <input type="text" class="form-control" id="username" name="username" value="{{$user->username}}">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="form-group col-6">
+                                <div class="form-group col-8 col-md-6">
                                     <label for="email" class="font-lobster text-navi-blue">Email</label>
                                     <input type="email" class="form-control" id="email" name="email" value="{{$user->email}}">
                                 </div>
