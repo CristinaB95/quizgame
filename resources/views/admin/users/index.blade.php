@@ -39,7 +39,11 @@
             <td>{{$user->id}}</td>
             <td>{{$user->username}}</td>
             <td>{{$user->email}}</td>
-            <td>{{$user->role == 0 ? "User" : "Admin"}}</td>
+            <td>
+              @foreach($user->roles as $role)
+                {{$role->label}}
+              @endforeach
+            </td>
             <td>{{$user->status == 0 ? "Inactive" : "Active"}}</td>
             <td>
               <a href="/admin/users/{{$user->id}}/edit"><i class="fas fa-user-edit"></i></a> 

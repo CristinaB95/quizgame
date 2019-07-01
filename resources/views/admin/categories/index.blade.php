@@ -40,7 +40,16 @@
             <td> {{$category->id}}</td>
             <td><a href="/admin/categories/{{$category->id}}"> {{$category->name}} </a></td>
             <td>{{substr($category->description,0, 100)}}</td>
-            <td><img class="image-category" src="/images/categories/{{$category->image}}"></td>
+            <td class="text-center">
+            <?php
+              // var_dump(file_exists( public_path() . '/images/categories/'.$category->image));
+            ?>
+            @if(file_exists( public_path() .'/images/categories/'.$category->image))
+              <img class="image-category" src="/images/categories/{{$category->image}}">
+            @else
+              <img class="image-category image-default"  src="/images/categories/default.png">
+            @endif
+            </td>
             <td>{{$category->status == 0 ? "Inactive" : "Active"}}</td>
             <td>
                 <a href="/admin/categories/{{$category->id}}/edit"><i class="far fa-edit"></i></a>

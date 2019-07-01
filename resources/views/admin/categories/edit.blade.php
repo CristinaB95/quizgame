@@ -39,7 +39,9 @@
         <div class="form-group col-6">
             <label for="image">Image</label>
             <input type="file" class="form-control-file" id="image" name="image">
+            @if(is_file('/images/categories/{{$category->image}}'))
             <img class="image-category-edit py-3" src="/images/categories/{{$category->image}}">
+            @endif
         </div>
         <div class="form-group col-6">
             <label for="status">Select status</label>

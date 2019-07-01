@@ -18,7 +18,8 @@
 @include('partials/navbar')
 @yield('content')
 <footer class="footer-section text-center pt-3">
-    @2019 Copyright Cristina
+    <a href="https://cristinabizoi.ro" class="footer-link mr-5"> @2019 Copyright Cristina Bizoi </a> 
+    <small> Illustrations by: <a href="https://undraw.co/" class="footer-link">undraw</a> | <a href="https://icons8.com" class="footer-link">icons8</a> </small>
 </footer>
   <!-- Bootstrap core JavaScript-->
   <script src="/vendor/jquery/jquery.min.js"></script>

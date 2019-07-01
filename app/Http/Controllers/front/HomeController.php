@@ -19,6 +19,11 @@ class HomeController extends Controller
     }
     public function categories(){
         $categories = Category::where('status', '=' , '1')->paginate(6);
+        foreach($categories as $category){
+            if(empty($category->image) || !file_exists( public_path() .'/images/categories/'.$category->image)){
+                $category->image = 'default.png';
+            }
+        }
         // dd($categories);
         return view('public.categories' , ['categories'=>$categories]);
     }
@@ -40,7 +45,12 @@ class HomeController extends Controller
         return redirect('/');
     }
     public function categoriesPaginate(){
-        $categories = Category::where('status', '=' , '1')->paginate(3);
+        $categories = Category::where('status', '=' , '1')->paginate(6);
+        foreach($categories as $category){
+            if(empty($category->image) || !file_exists( public_path() .'/images/categories/'.$category->image)){
+                $category->image = 'default.png';
+            }
+        }
         return $categories;
     }
     public function categoryQuiz($id){

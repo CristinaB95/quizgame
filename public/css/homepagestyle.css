@@ -232,6 +232,12 @@ body{
     position: absolute;
     bottom: 0;
 }
+.footer-link{
+    color: #dfe4ea;
+}
+.footer-link:hover{
+    color: #778beb;
+}
 .pb-100{
     padding-bottom: 100px;
 }
