@@ -7,15 +7,14 @@
   <li class="breadcrumb-item">
     <a href="#">Dashboard</a>
   </li>
-  <li class="breadcrumb-item active">Overview</li>
+  <li class="breadcrumb-item active">Edit User</li>
 </ol>
 
 
 <!-- DataTables Example -->
 <div class="card mb-3">
   <div class="card-header">
-    <i class="fas fa-table"></i>
-    Data Table Example</div>
+    {{$user->username}}</div>
   <div class="card-body">
   @if($errors->any())
   <div class="alert alert-danger">
@@ -47,11 +46,11 @@
         </div>
         <div class="form-group col-6">
             <label for="password">Password</label>
-            <input type="password" class="form-control-file" id="password" name="password" value="{{$user->password}}">
+            <input type="password" class="form-control-file" id="password" name="password" value="">
         </div>
         <div class="form-group col-6">
             <label for="password_re">Reenter Password</label>
-            <input type="password" class="form-control-file" id="password_re" name="password_re" value="{{$user->password}}">
+            <input type="password" class="form-control-file" id="password_re" name="password_re" value="">
         </div>
         <div class="form-group col-6">
             <label for="status">Select status</label>

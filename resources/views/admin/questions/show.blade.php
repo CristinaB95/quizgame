@@ -36,7 +36,7 @@
        </form>
         <tr>
             <td> {{$answer->id}}</td>
-            <td>{{$answer->content}}</td>
+            <td>{{substr($answer->content , 0, 50) }}</td>
             <td>{{$answer->valid == 0 ? "No" : "Yes" }}</td>
             <td>{{$answer->status == 0 ? "Inactive" : "Active"}}</td>
             <td>

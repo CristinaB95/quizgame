@@ -7,7 +7,8 @@ use App\Http\Controllers\Controller;
 use App\User;
 class UsersController extends Controller{
     public function __construct(){
-        $this->middleware('isAdmin');
+        $this->middleware('auth');
+        $this->middleware('isAdmin');  
     }
     public function index(){
         $users = User::all();

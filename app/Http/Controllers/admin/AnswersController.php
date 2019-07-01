@@ -11,6 +11,7 @@ use Auth;
 class AnswersController extends Controller
 {
     public function __construct(){
+        $this->middleware('auth');
         $this->middleware('isAdmin');
         
     }

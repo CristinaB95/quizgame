@@ -7,15 +7,14 @@
   <li class="breadcrumb-item">
     <a href="#">Dashboard</a>
   </li>
-  <li class="breadcrumb-item active">Overview</li>
+  <li class="breadcrumb-item active">Edit Category</li>
 </ol>
 
 
 <!-- DataTables Example -->
 <div class="card mb-3">
   <div class="card-header">
-    <i class="fas fa-table"></i>
-    Data Table Example</div>
+    {{$category->name}}</div>
   <div class="card-body">
   @if($errors->any())
   <div class="alert alert-danger">
@@ -40,6 +39,7 @@
         <div class="form-group col-6">
             <label for="image">Image</label>
             <input type="file" class="form-control-file" id="image" name="image">
+            <img class="image-category-edit py-3" src="/images/categories/{{$category->image}}">
         </div>
         <div class="form-group col-6">
             <label for="status">Select status</label>

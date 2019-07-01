@@ -40,7 +40,7 @@
             <td> {{$category->id}}</td>
             <td><a href="/admin/categories/{{$category->id}}"> {{$category->name}} </a></td>
             <td>{{substr($category->description,0, 100)}}</td>
-            <td></td>
+            <td><img class="image-category" src="/images/categories/{{$category->image}}"></td>
             <td>{{$category->status == 0 ? "Inactive" : "Active"}}</td>
             <td>
                 <a href="/admin/categories/{{$category->id}}/edit"><i class="far fa-edit"></i></a>

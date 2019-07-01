@@ -7,15 +7,14 @@
   <li class="breadcrumb-item">
     <a href="#">Dashboard</a>
   </li>
-  <li class="breadcrumb-item active">Overview</li>
+  <li class="breadcrumb-item active">Add Question</li>
 </ol>
 
 
 <!-- DataTables Example -->
 <div class="card mb-3">
   <div class="card-header">
-    <i class="fas fa-table"></i>
-    Data Table Example</div>
+    Add new question</div>
   <div class="card-body">
   @if($errors->any())
   <div class="alert alert-danger">

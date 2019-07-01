@@ -1,4 +1,16 @@
-a, a:hover{
+a{
     text-decoration: none;
     color: #222;
+}
+a:hover{
+    text-decoration: none;
+    color: #778beb;
+}
+.image-category{
+    height:50px;
+    width: 50px;
+}
+.image-category-edit{
+    height:150px;
+    width: 150px;
 }

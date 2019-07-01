@@ -27,7 +27,7 @@
             <th>Date added</th>
             <th>Status</th>
             <th></th>
-            <th>See the answers</th>
+            <th>Answers</th>
           </tr>
         </thead>
        <tbody>
@@ -38,7 +38,7 @@
         </form>
         <tr>
             <td> {{$question->id}}</td>
-            <td><a href="/admin/questions/{{$question->id}}">{{$question->content}}</a></td>
+            <td><a href="/admin/questions/{{$question->id}}">{{substr($question->content,0,55)}}</a></td>
             <td>{{$question->created_at}}</td>
             <td>{{$question->status == 0 ? "Inactive" : "Active"}}</td>
             <td>
