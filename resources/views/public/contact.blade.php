@@ -2,8 +2,17 @@
 @section('content')
     <section class="pages-front-height pb-100 d-flex align-items-center">
         <div class="container mx-auto">
-            <div class="contact-page-items mx-auto my-auto">
+            <div class="contact-page-items mx-auto">
                 <h1 class="text-center text-navi-blue font-lobster mb-5"> Contact us! </h1>
+                    @if($errors->any())
+                        <div class="alert alert-danger mx-auto text-center alert-message">
+                            <ul>
+                                @foreach($errors->all() as $error)
+                                    <li>{{$error}}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
                 <form class="contact-page-form mx-auto" action="/contact-page" method="POST">
                 @csrf
                     <div class="form-row">

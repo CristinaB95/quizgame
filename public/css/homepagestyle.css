@@ -4,6 +4,11 @@ a, a:hover{
     text-decoration: none;
     color: #222;
 }
+.alert-danger>ul>li{
+    list-style-type: none;
+}
+.alert-danger{
+    border: 1px solid #A00000;}
 body{
     position: relative;
     float:left;
@@ -169,7 +174,13 @@ body{
     font-size: 22px;
     color:#182c61;
 }
-
+.alert-message{
+    /* position: absolute; */
+    z-index: 5;
+    /* top: 50%; */
+    width: 70%
+    /* left: 50%; */
+}
 /* score page style */
 .score-page{
     background-image: url('/images/front/score-page.png');
@@ -192,7 +203,7 @@ body{
     color: #F4976C;
 }
 #score-quiz-bad{
-    color: red;
+    color: #A00000;
 }
 /* user nav style */
 .profile-page-items{
@@ -276,17 +287,28 @@ body{
     .score-page-container{
         width: 100%;
     }
+    .alert-message{
+        width: 100%;
+    }
 
 }
 @media screen and (min-width: 766px){
     .nav-user{
         border-right: 1px solid #dfe4ea;
     }
+    .footer-icons{
+        width: 50%;
+        float: right;
+    }
+ 
 }
 @media screen and (min-width: 766px) and (max-width: 1000px){
     .score-page{
     background-position: 65% 60%;
     background-size: 70%;
+    }
+    .footer-link{
+        width: 50%;
     }
 }
 @media screen and (max-width: 930px){

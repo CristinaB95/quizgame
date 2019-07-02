@@ -12,14 +12,14 @@
     <link href="/css/sb-admin.css" rel="stylesheet">
     <!-- Link style -->
     <link href="{{asset('css/homepagestyle.css')}}" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <title>Quizgame</title>
 </head>
 <body>
 @include('partials/navbar')
 @yield('content')
 <footer class="footer-section text-center pt-3">
-    <a href="https://cristinabizoi.ro" class="footer-link mr-5"> @2019 Copyright Cristina Bizoi </a> 
-    <small> Illustrations by: <a href="https://undraw.co/" class="footer-link">undraw</a> | <a href="https://icons8.com" class="footer-link">icons8</a> </small>
+    <a href="https://cristinabizoi.ro" class="footer-link"> @2019 Copyright Cristina Bizoi </a> 
+    <small class="d-none d-lg-block footer-icons"> Illustrations by: <a href="https://undraw.co/" class="footer-link">undraw</a> | <a href="https://icons8.com" class="footer-link">icons8</a> </small>
 </footer>
   <!-- Bootstrap core JavaScript-->
   <script src="/vendor/jquery/jquery.min.js"></script>

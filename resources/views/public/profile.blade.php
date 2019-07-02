@@ -27,23 +27,23 @@
                             {{csrf_field()}}
                             {{method_field('PUT')}}
                             <div class="row">
-                                <div class="form-group col-6">
+                                <div class="form-group col-12 col-sm-6">
                                     <label for="first_name" class="font-lobster text-navi-blue">First Name</label>
                                     <input type="text" class="form-control" id="first_name" name="first_name" value="{{$user->first_name}}" placeholder="First name">
                                 </div>
-                                <div class="form-group col-6">
+                                <div class="form-group col-12 col-sm-6">
                                     <label for="last_name" class="font-lobster text-navi-blue">Last Name</label>
                                     <input type="text" class="form-control" id="last_name" name="last_name" value="{{$user->last_name}}" placeholder="Last name">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="form-group col-8 col-md-6">
+                                <div class="form-group col-12 col-md-6">
                                     <label for="username" class="font-lobster text-navi-blue">Username</label>
                                     <input type="text" class="form-control" id="username" name="username" value="{{$user->username}}">
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="form-group col-8 col-md-6">
+                                <div class="form-group col-12 col-md-6">
                                     <label for="email" class="font-lobster text-navi-blue">Email</label>
                                     <input type="email" class="form-control" id="email" name="email" value="{{$user->email}}">
                                 </div>
