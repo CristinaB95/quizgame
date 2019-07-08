@@ -13,6 +13,12 @@
                             </ul>
                         </div>
                     @endif
+                    @if(session()->has('message'))
+                        <div class="alert alert-success mx-auto text-center alert-message">
+                            <i class="fas fa-check-circle"></i>
+                            {{ session()->get('message') }}
+                        </div>
+                    @endif
                 <form class="contact-page-form mx-auto" action="/contact-page" method="POST">
                 @csrf
                     <div class="form-row">

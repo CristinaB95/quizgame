@@ -49,11 +49,7 @@ body{
     float: left; */
     padding: 0.5rem 1rem;
 }
-.nav-bar{
-    /* width: 85%; */
-    /* position: relative;
-    float: left; */
-}
+
 .nav-bar a:hover{
     color:#778beb;
 }

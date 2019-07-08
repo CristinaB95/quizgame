@@ -5,7 +5,10 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="#">Dashboard</a>
+    <a href="/admin">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/questions/{{$answer->question->id}}">{{$answer->question->id}}</a>
   </li>
   <li class="breadcrumb-item active">Edit Answer</li>
 </ol>
@@ -42,8 +45,8 @@
         <div class="form-group col-6">
             <label for="valid">Select correct answer</label>
             <select name="valid" id="valid" class="form-control form-control-sm">
-                <option value="0" @if($answer->valid == 0) {{"selected"}} @endif> Yes </option>
-                <option value="1" @if($answer->valid == 1) {{"selected"}} @endif> No </option>
+                <option value="0" @if($answer->valid == 0) {{"selected"}} @endif> No </option>
+                <option value="1" @if($answer->valid == 1) {{"selected"}} @endif> Yes </option>
             </select>
         </div>
         <div class="form-group col-6">

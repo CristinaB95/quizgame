@@ -42,7 +42,7 @@ class HomeController extends Controller
         $contact->name = request("name"); 
         $contact->email = request("email"); 
         $contact->save();
-        return redirect('/');
+        return redirect()->back()->with('message', 'Sent!');
     }
     public function categoriesPaginate(){
         $categories = Category::where('status', '=' , '1')->paginate(6);

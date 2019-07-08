@@ -5,7 +5,10 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="#">Dashboard</a>
+    <a href="/admin">Dashboard</a>
+  </li>
+  <li class="breadcrumb-item">
+    <a href="/questions/{{$question->id}}">{{$question->id}}</a>
   </li>
   <li class="breadcrumb-item active">Add Answer</li>
 </ol>

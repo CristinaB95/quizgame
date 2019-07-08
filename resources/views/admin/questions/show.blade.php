@@ -5,9 +5,12 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="#">Dashboard</a>
+    <a href="/admin">Dashboard</a>
   </li>
-  <li class="breadcrumb-item active">Intrebarea {{$question->id}}</li>
+  <li class="breadcrumb-item">
+    <a href="/admin/categories/{{$question->category->id}}">{{$question->category->name}}</a>
+  </li>
+  <li class="breadcrumb-item active">Question {{$question->id}}</li>
 </ol>
 
 

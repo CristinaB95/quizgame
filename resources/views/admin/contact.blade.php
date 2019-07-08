@@ -5,9 +5,9 @@
 <!-- Breadcrumbs-->
 <ol class="breadcrumb">
   <li class="breadcrumb-item">
-    <a href="#">Dashboard</a>
+    <a href="/admin">Dashboard</a>
   </li>
-  <li class="breadcrumb-item active">Contacts messages</li>
+  <li class="breadcrumb-item active">Contact messages</li>
 </ol>
 
 
